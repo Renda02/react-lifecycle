@@ -5,7 +5,7 @@ export default class Counter extends Component {
    constructor(props){
        super(props)
            this.state = {
-               counter: 2
+               counter: 0
            }
 
            this.increment =()=>{
@@ -29,6 +29,12 @@ export default class Counter extends Component {
        console.log('Component Did Update')
    }
 
+
+
+componentWillUnmount(){
+    //happens when component is taken out of the DOM
+    console.log('component will unmount')
+}
 
     render() {
         return (
